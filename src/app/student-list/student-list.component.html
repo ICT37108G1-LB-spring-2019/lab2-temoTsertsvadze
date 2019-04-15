@@ -1,22 +1,13 @@
-    
+
 <table border="2px">
-  <table>
-    <tr>
-      <th>სახელი</th>
-      <th>გვარი</th>
-      <th>პირადი ნომერი</th>
-    </tr>
-    
-    <tr >
-      <td *ngFor="let name of student1" >{{ name }}</td>
-      
-    </tr>
-    <tr >
-      <td *ngFor="let name of student2" >{{ name }}</td>
-      
-    </tr>
-    <tr >
-      <td *ngFor="let name of student3" >{{ name }}</td>
-      
-    </tr>
-</table>
+  <tr>
+    <th>name</th>
+    <th>surname</th>
+    <th>ID</th>
+  </tr>
+  <tr *ngFor="let student of StudentList">
+    <td> {{student.name}}</td>
+    <td> {{student.surname}}</td>
+    <td>  {{student.ID}}</td>
+  </tr>
+  </table>
