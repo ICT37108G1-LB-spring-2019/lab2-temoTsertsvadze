@@ -6,19 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent implements OnInit {
-  student1:string[];
-  student2:string[];
-  student3:string[];
-
-  constructor() {
-    this.student1 = ['temo', 'tsertsvadze', '12312'];
-    this.student2 = ['dato', 'kereselidze', '232232'];
-    this.student3 = ['giorgi', 'gviniashvili', '232323223'];
+public StudentList:Student[];
+  constructor() { 
+this.StudentList = [new Student("Temur", "Tsertsvadze", "12319213", 2000),
+new Student("Davit", "nasdads", "1237831", 23232)
+];
 
 
-   }
-
+}
   ngOnInit() {
+  }
+
+}
+export class Student {
+  // name: string;
+  // surname: string;
+  // ID: number | string;
+  // sallary ?: string;
+  constructor(public name: string, public surname: string, public ID: number | string, public sallary: number){
+
   }
 
 }
